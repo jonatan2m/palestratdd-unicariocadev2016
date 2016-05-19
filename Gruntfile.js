@@ -4,9 +4,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),               
     jasmine : {
       // Arquivos que você quer testar
-      src : [
-      'js/*.js'      
-      ],
+      src : ['js/*.js'],
       // Seus testes com Jasmine
       options: {
         specs : 'specs/*.js'        
@@ -30,6 +28,7 @@ module.exports = function(grunt) {
       }
     },
     /*notify_hooks: {
+      //configurações para grunt-notify: https://www.npmjs.com/package/grunt-notify
       options: {
         enabled: true,
         max_js_hint_notifications: 5,
