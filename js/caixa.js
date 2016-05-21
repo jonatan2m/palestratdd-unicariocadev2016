@@ -20,6 +20,29 @@ Caixa somente com notas de R$ 10,00, R$ 20,00, R$ 50,00 e R$ 100,00
 function CaixaEletronico() {
 
 	this.saque = function(valor) {
-		return 1;
+		var notas = new Notas();
+		if(valor == 60){
+			notas.dez = 1;
+			notas.cinquenta = 1;
+			//return notas;
+		} else if(valor >= 50){
+			notas.cinquenta = valor / 50;
+			
+		}else{
+			notas.dez = valor / 10;
+		}
+
+		return notas;
 	};
 }
+
+function Notas (){
+	this.dez = 0;
+	this.cinquenta = 0;
+}
+
+
+
+
+
+
